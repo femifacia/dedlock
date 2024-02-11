@@ -1,0 +1,20 @@
+[requires]
+boost/1.77.0
+openssl/3.0.1
+sfml/2.5.1
+
+[options]
+*:shared=True
+
+[imports]
+bin, *.lib -> ./bin
+bin, *.dll* -> ./bin
+lib, *.lib -> ./bin
+lib, *.dylib* -> ./lib
+lib, *.dylib* -> ./
+lib, *.so* -> ./lib
+lib, *.h* -> ./include
+bin, *.h* -> ./include
+
+[generators]
+cmake
